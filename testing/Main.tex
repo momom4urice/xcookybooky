@@ -7,9 +7,9 @@ a4paper,
 
 
 \usepackage[T1]{fontenc}
-\usepackage[latin1]{inputenc} 
+\usepackage[latin1]{inputenc}
 \usepackage{pbsi} % font package
-\usepackage{emerald} % font package
+% \usepackage{emerald} % font package
 \usepackage{lmodern} % font package
 \usepackage{bookman} % font package
 \usepackage
@@ -78,7 +78,7 @@ a4paper,
 	pdftitle 			= {Testing the xcookybooky package},
 	pdfsubject			= {testing},
 	pdfkeywords			= {recipes},
-	pdfstartview		= {FitV}, 	
+	pdfstartview		= {FitV},
 	pdfview				= {FitH},
 	pdfpagemode			= {UseOutlines}, % Options; UseNone, UseOutlines
 	bookmarksopen		= {true},
@@ -110,7 +110,7 @@ a4paper,
 	\ifthenelse{\equal{#1}{}}
 	{% No optional argument given
 		\xcb@separationgraph{#2}
-	}{% 
+	}{%
 		\xcb@separationgraph[#1]{#2}
 	}
 	\makeatother
@@ -202,4 +202,4 @@ This section contains tests for configuration, e.g. the configuration file.
 \include{tex/ConfigurationFileTest}
 
 %
-\end{document} 
+\end{document}
