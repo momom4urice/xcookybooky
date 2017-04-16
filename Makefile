@@ -10,7 +10,6 @@ all:
 	cp -f xcookybooky.sty testing/
 	cp -f xcookybooky.sty example/xcookybooky.sty
 
-
 clean:
 	rm -f xcookybooky.glo
 	rm -f xcookybooky.gls

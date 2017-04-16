@@ -25,7 +25,7 @@
 %<*driver>
 \documentclass{ltxdoc}
 \usepackage[T1]{fontenc}
-\usepackage[latin1]{inputenc} 
+\usepackage[latin1]{inputenc}
 \usepackage{lmodern}
 \usepackage{xcookybooky}
 \usepackage{booktabs}
@@ -68,7 +68,7 @@
 %</driver>
 % \fi
 %
-% \CheckSum{829}
+% \CheckSum{0}
 %
 % \CharacterTable
 %  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
@@ -126,7 +126,7 @@
 % \section{Introduction}
 %
 % It all begin in 2011 when I wanted to make a cookbook with \LaTeX. Thus I was looking for recipe templates and found the \texttt{cookybooky} package by Jürgen Gilg (\url{http://www.ctan.org/pkg/cookybooky}). It looks very good, but I was unable to compile it (e.g. I haven't got the Lucida fonts). Also there are some packages which have to be downloaded by hand, because there are not available at CTAN. Other handicaps are the missing possibility to create a PDF-file directly and a recipe cannot be longer than a single page. So decided to take a look at the code. Step by step I replaced all critical parts. Finally the code is nearly complete different from the original and now it is possible to create beautiful designed recipes much easier (at least in my opinion).
-% 
+%
 % Please note that there is no compatibility between xcookybooky and cookybooky, even the name is associating it. I chose the name, because I was was inspired by the layout.
 %
 %
@@ -138,10 +138,10 @@
 %
 % \DescribeEnv{recipe}
 % The \texttt{recipe} environment is used to insert recipes. Each recipe is included in a single enviroment. It is necessary to enter the name of the recipe. Besides it is possible to insert also the recipetime, the portions, the calory content and the source (where you get this recipe).
-% 
+%
 % \begin{lstlisting}[caption={Recipe Environment}]
 % \begin{recipe}
-% [% 
+% [%
 %     preparationtime = {\unit[1]{h}},
 %     bakingtime={\unit[1]{h}},
 %     bakingtemperature={\protect\bakingtemperature{fanoven=\unit[230]{°C}}},
@@ -204,18 +204,18 @@
 % If you are using the three columns solution there are two options:
 % \begin{enumerate}
 %   \item Use the version 1.1 of this package, which can be found at \url{https://code.google.com/p/xcookybooky/}
-%   \item Redefine the concerning command in your latex file or in the configuration file 
+%   \item Redefine the concerning command in your latex file or in the configuration file
 % \end{enumerate}
-% 
+%
 % \DescribeMacro{\preparation}
-% The preparation steps are inserted by this macro. Every step is written after \texttt{step} command. This is necessarry for the numeration. Since version 1.4 it is allowed to use blank lines to create passages. 
+% The preparation steps are inserted by this macro. Every step is written after \texttt{step} command. This is necessarry for the numeration. Since version 1.4 it is allowed to use blank lines to create passages.
 %
 % \begin{lstlisting}[caption={Preparation Command}]
 % \preparation{
 %     \step This is the first step for cooking a brilliant meal.
 %     \step The second step follows...
 %     \step and so on
-%     \step Enjoy your meal! 
+%     \step Enjoy your meal!
 % }
 % \end{lstlisting}
 %
@@ -226,14 +226,14 @@
 %         \item This is the first step for cooking a brilliant meal.
 %         \item The second step follows...
 %         \item and so on
-%         \item Enjoy your meal! 
+%         \item Enjoy your meal!
 %     \end{enumerate}
 % }
 % \end{lstlisting}
 %
 %
 % \subsection{Advanced}
-% 
+%
 % \DescribeMacro{\introduction}
 % The \texttt{introduction} macro can be used for inserting an introduction before the preparation and ingredients part. It has a frame and the text can contain blank lines to create passages.
 %
@@ -242,7 +242,7 @@
 %     This text block can contain an introduction to the recipe.
 % }
 % \end{lstlisting}
-% 
+%
 % \DescribeMacro{\suggestion}
 % This command is displayed after the ingredients and preparation part of the recipe. It is expandable so that you can insert multiple suggestions. The optional parameter can be used to set a headline.
 % \begin{lstlisting}[caption={Suggestion Command}]
@@ -283,7 +283,7 @@
 % The following macros can be used outside the recipe environment to choose your personal color etc.
 %
 % \DescribeMacro{\setRecipeColors}
-% If you want to change the default colors, you can use \texttt{setRecipeColors}. The colors are set by <key~=~value> as known by the \texttt{xkeyval} package. The names of colors can be found in table \ref{tbl:colormanagement}. 
+% If you want to change the default colors, you can use \texttt{setRecipeColors}. The colors are set by <key~=~value> as known by the \texttt{xkeyval} package. The names of colors can be found in table \ref{tbl:colormanagement}.
 % \begin{table}[htbp]
 %     \centering
 %     \begin{tabular}{rcl}
@@ -301,20 +301,20 @@
 %         hint            & red       & hint (text) \\
 %         hinthead        & red       & headline of the hint \\
 %         hintline        & red       & lines leftside the hint text (cross) \\
-%         numeration      & red       & numeration of the preparation steps \\ 
+%         numeration      & red       & numeration of the preparation steps \\
 %     \end{tabular}
 %     \caption{Color Management}
 %     \label{tbl:colormanagement}
 % \end{table}
 % New colors can be easiliy defined by the \texttt{xcolor} package as shown the example below.
-% 
+%
 % \begin{lstlisting}[caption={Setting Recipe Colors Command}]
 % \definecolor{webgreen}{rgb}{0,.5,0}
 %
 % \setRecipeColors{
 %     recipename = webgreen,
 %     ing = blue,
-%     numeration = black,    
+%     numeration = black,
 % }
 % \end{lstlisting}
 %
@@ -335,7 +335,7 @@
 %     \caption{Recipe Lengths}
 %     \label{tbl:recipelengths}
 % \end{table}
-% 
+%
 % \begin{lstlisting}[caption={Setting Recipe Lengths Command}]
 % \setRecipeLengths{
 %     preparationwidth = 0.5\textwidth,
@@ -389,7 +389,7 @@
 %
 % \subsection{Translation}
 % \DescribeMacro{\setHeadlines}
-% The command \texttt{setHeadlines} allows to modify the (translated) headlines. This is also needed for translations, if the used language is not supported yet. If you have improvements for a translation or created a new one, feel free to send me a e-mail. 
+% The command \texttt{setHeadlines} allows to modify the (translated) headlines. This is also needed for translations, if the used language is not supported yet. If you have improvements for a translation or created a new one, feel free to send me a e-mail.
 % The headlines are also inserted in <key~=~value> form. All possible key are described in table~\ref{tbl:headlines}.
 % \begin{table}[htbp]
 %     \centering
@@ -435,7 +435,7 @@
 %
 % \subsection{Background graphic}
 % \label{sec:background}
-% Inside this package there is only the option to set a background picture using the \texttt{setBackgroundPicture} macro. For creating transparent backgrounds I recommand \textbf{Inkscape}\footnote{http://inkscape.org/}. You just have to import a picture and reduce the opacity of the picture (I prefer \unit[22]{\%}). The possible options for the orientation are: 
+% Inside this package there is only the option to set a background picture using the \texttt{setBackgroundPicture} macro. For creating transparent backgrounds I recommand \textbf{Inkscape}\footnote{http://inkscape.org/}. You just have to import a picture and reduce the opacity of the picture (I prefer \unit[22]{\%}). The possible options for the orientation are:
 % \vspace{-1em}
 % \begin{itemize}
 %     \item default
@@ -454,7 +454,7 @@
 %     height,
 %     orientation=pagecenter
 % ]{pic/bg_transparent} % filepath
-% \end{lstlisting} 
+% \end{lstlisting}
 %
 % \newpage
 % \IfFileExists{example/example.pdf}
@@ -499,13 +499,14 @@
 \newif\ifHandwrittenFont@required
 \HandwrittenFont@requiredfalse
 \DeclareOption{handwritten}
-{% displays the recipename in a handwitten font
-    \HandwrittenFont@requiredtrue           
+{% displays the recipe name in a handwritten font
+    \HandwrittenFont@requiredtrue
     \AtEndOfPackage{
         \setRecipeSizes{recipename = \fontsize{25pt}{30pt}}
         \setRecipenameFont{fjd}{T1}{m}{n}
     }
 }
+
 \DeclareOption{nowarnings}
 {% tries to eliminate nasty warnings
     \AtEndOfPackage{
@@ -513,6 +514,7 @@
         %\def\@fancywarning#1{}
     }
 }
+
 \DeclareOption{myconfig}
 {% load personal configuration
     \AtEndOfPackage{
@@ -521,6 +523,21 @@
         {\PackageWarning{xcookybooky}{cannot find the configuration file 'xcookybooky.cfg'}}
     }
 }
+
+\newif\ifSetHeader
+\SetHeadertrue
+\DeclareOption{noheader}
+{% suppress header configuration
+    \SetHeaderfalse
+}
+
+\newif\ifSetLayout
+\SetLayouttrue
+\DeclareOption{nolayout}
+{% suppress page layout configuration
+    \SetLayoutfalse
+}
+
 \ProcessOptions\relax
 
 %    \end{macrocode}
@@ -542,7 +559,13 @@
 \RequirePackage{ifthen}
 \RequirePackage{xkeyval}
 \RequirePackage{lettrine}                    % numbering the preparation steps
-\RequirePackage{fancyhdr}
+\ifSetHeader                                 % load header setup facilities
+    \@ifclassloaded{memoir}
+    {}
+    {
+        \RequirePackage{fancyhdr}
+    }
+\fi
 \RequirePackage{units}
 \RequirePackage{eso-pic}                     % for background pictures
 \RequirePackage{picture}                     % for modfifying the position of the bg pictures
@@ -556,22 +579,28 @@
 %
 % \textbf{Note:} I tried to use the KOMA class \texttt{scrartcl}, but unfortunately some strange effects occured.
 %    \begin{macrocode}
-\setlength{\parindent}{0cm}
-\setlength{\parskip}{2ex plus 0.5ex}
+\ifSetLayout
+    \@ifclassloaded{memoir}
+    {}
+    {
+        \setlength{\parindent}{0cm}
+        \setlength{\parskip}{2ex plus 0.5ex}
 
-\setlength{\textwidth}{15.5cm}
-\setlength{\textheight}{24.0cm}
-\setlength{\topmargin}{-0.8cm}
-\setlength{\headheight}{14pt} %0cm
-\setlength{\headsep}{1cm}
-\setlength{\topskip}{0cm}
-\setlength{\footskip}{1.4cm}
-\setlength{\evensidemargin}{-0.5cm}
-\setlength{\oddsidemargin}{0.5cm}
-\setlength{\voffset}{0cm}
-\setlength{\hoffset}{0cm}
-\setcounter{secnumdepth}{2} % subsubsections not numbered
-\setcounter{tocdepth}{3}    % subsubsections in the .toc file
+        \setlength{\textwidth}{15.5cm}
+        \setlength{\textheight}{24.0cm}
+        \setlength{\topmargin}{-0.8cm}
+        \setlength{\headheight}{14pt} %0cm
+        \setlength{\headsep}{1cm}
+        \setlength{\topskip}{0cm}
+        \setlength{\footskip}{1.4cm}
+        \setlength{\evensidemargin}{-0.5cm}
+        \setlength{\oddsidemargin}{0.5cm}
+        \setlength{\voffset}{0cm}
+        \setlength{\hoffset}{0cm}
+        \setcounter{secnumdepth}{2} % subsubsections not numbered
+        \setcounter{tocdepth}{3}    % subsubsections in the .toc file
+    }
+\fi
 
 %    \end{macrocode}
 %
@@ -757,7 +786,7 @@
     \color{\xcb@color@numeration}
 }
 
-%    \end{macrocode} 
+%    \end{macrocode}
 %
 % \subsection{Headlines and Translations}
 % The following section defines the default English headlines of the recipe. They are only used if no supported language is detected.
@@ -1045,7 +1074,7 @@
         }
         {%
             \textbf{{\color{\xcb@color@suggestionhead}#1}}
-            
+
             {\color{\xcb@color@suggestion}#2}
         }
     }
@@ -1220,7 +1249,7 @@
 % \begin{macro}
 % The following command is needed, if more ingredients than preparation (steps) are inserted. In this case the \texttt{wrapfigure} package behaves in a strange way. The result is that the hint is also floating around the ingredients, although the "box" is already closed. This command repairs this effect.
 % It is taken from \url{http://mizine.de/latex/wrapfigure-austricksen/}.
-%    \begin{macrocode}    
+%    \begin{macrocode}
 \newcommand\xcb@cmd@wrapfill
 {% Bug fix for wrapfigure package
     \par
@@ -1307,7 +1336,7 @@
             #1
             \vspace{0.6cm}
         \end{minipage}
-    } 
+    }
 }
 
 %    \end{macrocode}
@@ -1316,12 +1345,24 @@
 % \begin{macro}
 % This command is inserted before the title of the recipe. That means it is displayed after the pictures.
 %    \begin{macrocode}
-\newcommand*{\pretitle}[1]
-{% Hook: entered before the recipe title
-    \def\xcb@hook@pretitle
-    {%
-        #1
-    } 
+\@ifclassloaded{memoir}
+{
+    \renewcommand{\pretitle}[1]
+    {% Hook: entered before the recipe title
+        \def\xcb@hook@pretitle
+        {%
+            #1
+        }
+    }
+}
+{
+    \newcommand*{\pretitle}[1]
+    {% Hook: entered before the recipe title
+        \def\xcb@hook@pretitle
+        {%
+            #1
+        }
+    }
 }
 
 %    \end{macrocode}
@@ -1417,10 +1458,10 @@
     \def\xcb@hook@postingredients{}
     \def\xcb@suggestion{}
     \def\xcb@hint{}
-    
+
     \def\xcb@recipename{#2}
     \setkeys{recipe}{#1}  % reading the optional parameters
-    
+
     \setcounter{xcb@newpagefoot}{1}
     \setcounter{xcb@newpagehead}{\value{page}}
 }
@@ -1460,7 +1501,7 @@
     \recipesection[\normalsize\xcb@recipename]%
     {\hspace{-1em}\textcolor{\xcb@color@recipename}{\xcb@font@recipename\xcb@recipename}}
     \xcb@cmd@recipeoverview
-    
+
     \xcb@introduction
 
 %% THIRD BLOCK
@@ -1490,13 +1531,13 @@
         \end{wraptable}
     }
     \xcb@hook@prepreparation
-    
+
     \xcb@preparation
-    
+
     \xcb@hook@postpreparation
 
     \xcb@suggestion
-    
+
     \vfill
 
     \xcb@cmd@wrapfill
@@ -1509,25 +1550,31 @@
 %
 % \subsection{Header and Footer}
 %    \begin{macrocode}
-\pagestyle{fancy}
-\renewcommand{\sectionmark}[1]
-{%
-    \markright{\MakeUppercase{\thesection.\ #1}}
-}
-\renewcommand{\headrulewidth}
-{%
-    0.5pt
-}
-\fancyhf{}
-\if@twoside
-    \fancyfoot[LE,RO]{\textbf{\thepage}}
-    \fancyhead[LE,RO]{\rightmark}
-\else
-    \fancyfoot[R]{\textbf{\thepage}}
-    \fancyhead[R]{\rightmark}
+\ifSetHeader
+    \@ifclassloaded{memoir}
+    {}
+    {
+        \pagestyle{fancy}
+        \renewcommand{\sectionmark}[1]
+        {%
+            \markright{\MakeUppercase{\thesection.\ #1}}
+        }
+        \renewcommand{\headrulewidth}
+        {%
+            0.5pt
+        }
+        \fancyhf{}
+        \if@twoside
+            \fancyfoot[LE,RO]{\textbf{\thepage}}
+            \fancyhead[LE,RO]{\rightmark}
+        \else
+            \fancyfoot[R]{\textbf{\thepage}}
+            \fancyhead[R]{\rightmark}
+        \fi
+        \fancyhead[C]{\@newpagehint{head}}
+        \fancyfoot[C]{\@newpagehint{foot}}
+    }
 \fi
-\fancyhead[C]{\@newpagehint{head}}
-\fancyfoot[C]{\@newpagehint{foot}}
 
 %    \end{macrocode}
 % Below the counter for the header and the footer are defined and initialised.
@@ -1641,7 +1688,7 @@
                 }
             }
         }
-        
+
     }
 }
 %</package>
@@ -1651,7 +1698,7 @@
 % \subsection{Configuration file}
 % \label{sec:configuration}
 % This file is intended to change the design central. The most important commands are already written down. You have to submit the option \texttt{myconfig}, if you want to load the configuration file.
-%    \begin{macrocode} 
+%    \begin{macrocode}
 %<*config>
 %% Change Layout
 \setRecipeColors
